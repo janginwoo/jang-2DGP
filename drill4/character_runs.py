@@ -21,6 +21,7 @@ while(True):
         delay(0.05)
         get_events()
     while boy == 1:
+        clear_canvas()
         grass.draw(400, 30)
         character.clip_draw(frame * 100, 0, 100, 100, x, 90)
         update_canvas()
