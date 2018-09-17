@@ -3,71 +3,41 @@ import math
 open_canvas()
 
 grass = load_image('grass.png')
-character = load_image('character.png')
-def move_from_center_to_right():
-    x, y = 800 // 2, 90
-    while x < 800 - 25:
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        x += 2
-        delay(0.01)
-def move_up():
-    x, y = 800 - 25, 90
-    while y < 600-50:
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        y += 2
-        delay(0.01)
-
-def move_left():
-    x, y = 800 - 25, 600 - 50
-    while x > 0 + 25:
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        x -= 2
-        delay(0.01)
-def move_down():
-    x, y = 0 + 25, 600 - 50
-    while y > 90:
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        y -= 2
-        delay(0.01)
-def move_from_left_to_center():
-    x, y = 0+25, 90
-    while x <800//2:
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        x += 2
-        delay(0.01)
-def make_rectangle() :
-    move_from_center_to_right()
-    move_up()
-    move_left()
-    move_down()
-    move_from_left_to_center()
+character = load_image('animation_sheet.png')
+def move_point1():
     pass
-import math
-def make_circle() :
-    cx, cy, r = 800 // 2, 600 // 2, (600 - 180) // 2
-    degree = -90
-    while degree < 270:
-        radian = math.radians(degree)
-        grass = load_image('grass.png')
-        character = load_image('character.png')
-        x = cx + r * math.cos(radian)
-        y = cy + r * math.sin(radian)
-        clear_canvas_now()
-        grass.draw_now(400, 30)
-        character.draw_now(x, y)
-        degree += 1
-while True :
-    make_rectangle()
-    make_circle()
-    
+def move_point2():
+    pass
+def move_point3():
+    pass
+def move_point4():
+    pass
+def move_point5():
+    pass
+def move_point6():
+    pass
+def move_point7():
+    pass
+def move_point8():
+    pass
+def move_point9():
+    pass
+def move_point10():
+    pass
+
+def go_character() :
+    move_point1()
+    move_point2()
+    move_point3()
+    move_point4()
+    move_point5()
+    move_point6()
+    move_point7()
+    move_point8()
+    move_point9()
+    move_point10()
+
+
+while True:
+    go_character()
 close_canvas()

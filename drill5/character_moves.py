@@ -6,5 +6,5 @@ grass = load_image('grass.png')
 character = load_image('character.png')
 
 # fill here
-    
+
 close_canvas()
