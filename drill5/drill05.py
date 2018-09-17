@@ -2,7 +2,8 @@ from pico2d import *
 open_canvas()
 
 grass = load_image('grass.png')
-character = load_image('animation_sheet.png')
+character1  = load_image('animation_sheet.png')
+character2 = load_image('run_animation.png')
 
 
 def move_point1():
@@ -14,7 +15,7 @@ def move_point1():
    while count<200:
        clear_canvas_now()
        grass.draw(400, 30)
-       character.clip_draw(frame*100, 0, 100, 100, x, y)
+       character1.clip_draw(frame*100, 0, 100, 100, x, y)
        update_canvas()
        count+=1
        x+=gotox
@@ -32,7 +33,7 @@ def move_point2():
     while count < 200:
         clear_canvas_now()
         grass.draw(400, 30)
-        character.clip_draw(frame * 100, 0, 100, 100, x, y)
+        character2.clip_draw(frame * 100, 0, 100, 100, x, y)
         update_canvas()
         count += 1
         x += gotox
@@ -42,7 +43,21 @@ def move_point2():
 
 
 def move_point3():
-    pass
+    frame = 0
+    count = 0
+    x, y = 535, 470
+    gotox = (477 - 535) / 200
+    gotoy = (203 - 470) / 200
+    while count < 200:
+        clear_canvas_now()
+        grass.draw(400, 30)
+        character1.clip_draw(frame * 100, 0, 100, 100, x, y)
+        update_canvas()
+        count += 1
+        x += gotox
+        y += gotoy
+        frame = (frame + 1) % 8
+        delay(0.05)
 def move_point4():
     pass
 def move_point5():
@@ -62,7 +77,7 @@ def move_point10():
 
 while True:
     #move_point1()
-    move_point2()
+    #move_point2()
     move_point3()
     move_point4()
     move_point5()
