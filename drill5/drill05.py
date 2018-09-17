@@ -12,7 +12,6 @@ def move_from_center_to_right():
         character.draw_now_(x, y)
         x += 2
         delay(0.01)
-    pass
 def move_up():
     pass
 def move_left():
