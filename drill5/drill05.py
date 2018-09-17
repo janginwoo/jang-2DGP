@@ -1,11 +1,28 @@
 from pico2d import *
-import math
 open_canvas()
 
 grass = load_image('grass.png')
 character = load_image('animation_sheet.png')
+
+
 def move_point1():
-    pass
+   frame = 0
+   count = 0
+   x, y = 203, 535
+   gotox=(132-203)/200
+   gotoy=(243-535)/200
+   while count<100:
+       clear_canvas_now()
+       grass.draw(400, 30)
+       character.clip_draw(frame*100, 0, 100, 100, x, y)
+       update_canvas()
+       count+=1
+       x+=gotox
+       y+=gotoy
+       frame=(frame+1)%8
+       delay(0.05)
+
+
 def move_point2():
     pass
 def move_point3():
@@ -25,7 +42,9 @@ def move_point9():
 def move_point10():
     pass
 
-def go_character() :
+
+
+while True:
     move_point1()
     move_point2()
     move_point3()
@@ -37,7 +56,4 @@ def go_character() :
     move_point9()
     move_point10()
 
-
-while True:
-    go_character()
 close_canvas()
