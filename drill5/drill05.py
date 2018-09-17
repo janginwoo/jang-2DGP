@@ -91,7 +91,21 @@ def move_point5():
         frame = (frame + 1) % 8
         delay(0.05)
 def move_point6():
-    pass
+    frame = 0
+    count = 0
+    x, y = 316, 225
+    gotox = (510 - 316) / 200
+    gotoy = (92 - 225) / 200
+    while count < 200:
+        clear_canvas_now()
+        grass.draw(400, 30)
+        character2.clip_draw(frame * 100, 0, 100, 100, x, y)
+        update_canvas()
+        count += 1
+        x += gotox
+        y += gotoy
+        frame = (frame + 1) % 8
+        delay(0.05)
 def move_point7():
     pass
 def move_point8():
@@ -108,7 +122,7 @@ while True:
     #move_point2()
     #move_point3()
     #move_point4()
-    move_point5()
+    #move_point5()
     move_point6()
     move_point7()
     move_point8()
